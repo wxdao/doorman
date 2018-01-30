@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.vecsight.w.doormaninvoker.MainActivity">
+
+    <view xmlns:camerakit="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/cameraView"
+        class="com.flurgle.camerakit.CameraView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        camerakit:ckCropOutput="true"
+        camerakit:ckFocus="continuous"
+        camerakit:ckJpegQuality="100"
+        camerakit:ckMethod="still"
+        camerakit:ckPermissions="picture"
+        camerakit:ckZoom="pinch"
+        camerakit:ckFacing="front"/>
+
+    <view
+        android:id="@+id/indicatorView"
+        class="com.vecsight.w.doormaninvoker.IndicatorView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/cameraView"
+        app:layout_constraintEnd_toEndOf="@+id/cameraView"
+        app:layout_constraintStart_toStartOf="@+id/cameraView"
+        app:layout_constraintTop_toTopOf="@+id/cameraView" />
+</android.support.constraint.ConstraintLayout>
