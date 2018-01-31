@@ -163,7 +163,7 @@ func searchFace(apiKey, secretKey, groupID, image string) string {
 		return ""
 	}
 
-	if bodyJSON.ResultNum != 1 {
+	if bodyJSON.ResultNum != 1 || bodyJSON.Result[0].Scores[0] < 80 {
 		return ""
 	}
 	return bodyJSON.Result[0].UID
